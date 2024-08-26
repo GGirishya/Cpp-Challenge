@@ -10,5 +10,10 @@ public:
             int x = (l1 != nullptr) ? l1->val : 0;
             int y = (l2 != nullptr) ? l2->val : 0;
             int sum = carry + x + y;
+            
             // Update carry for the next iteration
         carry = sum / 10;
+            
+            // Create a new node with the digit value (sum % 10) and append it to the result list
+            current->next = new ListNode(sum % 10);
+            current = current->next;
