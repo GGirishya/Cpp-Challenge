@@ -17,3 +17,12 @@ public:
             // Create a new node with the digit value (sum % 10) and append it to the result list
             current->next = new ListNode(sum % 10);
             current = current->next;
+            // Move to the next nodes in l1 and l2
+                if (l1 != nullptr) l1 = l1->next;
+                if (l2 != nullptr) l2 = l2->next;
+            }
+        // Check if there's any remaining carry to add as a new node
+        if (carry > 0) {
+            current->next = new ListNode(carry);
+        }
+
