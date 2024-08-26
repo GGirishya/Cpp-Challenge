@@ -25,4 +25,7 @@ public:
         if (carry > 0) {
             current->next = new ListNode(carry);
         }
-
+        // Return the next node of Head, which is the actual head of the resulting list
+        return Head->next;
+    }
+};
