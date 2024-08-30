@@ -11,5 +11,12 @@ public:
         for (int i = 0; i < n; i++) {
             dp[i][i] = true;
         }
-
+        // Check for palindromes of length 2
+        for (int i = 0; i < n - 1; i++) {
+            if (s[i] == s[i + 1]) {
+                dp[i][i + 1] = true;
+                start = i;
+                maxLength = 2;
+            }
+        } 
 };
