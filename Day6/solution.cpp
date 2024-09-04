@@ -18,6 +18,13 @@ public:
             currentRow += goingDown ? 1 : -1;
         }
 
+        // Combine all rows into one string
+        string result;
+        for (string row : rows) {
+            result += row;
+        }
+
+
 
 };
 
