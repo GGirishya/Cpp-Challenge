@@ -23,8 +23,8 @@ public:
         for (string row : rows) {
             result += row;
         }
-
-
+        return result;
+    }
 
 };
 
